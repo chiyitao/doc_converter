@@ -8,5 +8,5 @@ cd mysite
 python manage.py runserver 0.0.0.0:8100
 ```
 
-3. visit the url of http://x.x.x.x:8100/convert_page/.
+3. Visit the url of http://x.x.x.x:8100/convert_page/.
 
