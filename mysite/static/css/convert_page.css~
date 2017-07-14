@@ -1,0 +1,23 @@
+#header, #input-file, #output-file {
+    width: 1200px;
+    margin: 0 auto;
+}
+#header h1 {
+    background: #F0FFFF;
+    height: 100px;
+    /* float: left; */
+    margin-top: 20px;
+    text-align: center;
+    color: #996600;
+}
+#input-file {
+    
+    background: #0088FF;
+    height: 100px;
+}
+#output-file {
+    
+    background: #888888;
+    height: 600px;
+}
+    

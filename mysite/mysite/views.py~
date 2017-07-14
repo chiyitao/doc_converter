@@ -1,0 +1,52 @@
+from django.http import HttpResponse
+
+from django.shortcuts import render_to_response
+
+from django.views.decorators.csrf import ensure_csrf_cookie
+
+import os.path
+import subprocess
+
+def hello(request):
+    return HttpResponse('Hello World')
+
+@ensure_csrf_cookie
+def convert_page(request):
+    ctx = {}
+    return render_to_response('convert_page.html', ctx)
+    # pass
+
+
+def converter(request):
+    # TODO: check the parameter
+
+    # do the job
+    
+    input_file_name = request.POST['user-file-name']
+
+    print(input_file_name)
+
+    output_file_content = request.POST['user-file']
+
+    print(output_file_content)
+
+    # assert(False)
+
+    if request.method == 'POST':
+        
+        temp_file = open(input_file_name, 'w')
+        temp_file.write(request.POST['user-file'])
+        temp_file.close()    
+
+    output_file_name = os.path.basename(input_file_name) + '.md'    
+    
+    convert_cmd = 'pandoc -o {output_file_name} {input_file_name}' \
+          .format(output_file_name = output_file_name, \
+                  input_file_name = input_file_name)
+    
+    p = subprocess.Popen(convert_cmd, shell=True)    
+    
+    return HttpResponse('Recieved the file!')
+
+
+    

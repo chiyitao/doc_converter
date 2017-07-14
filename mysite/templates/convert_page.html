@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Document Converter</title>
+  <!-- <link rel="stylesheet" href="/static/css/convert_page.css" type="text/css" /> -->
+  <!-- {% load static %}
+  <link rel="stylesheet" href="{% static "css/convert_page.css" %}" type="text/css" />
+  -->
+  <link rel="stylesheet" href="/static/css/convert_page.css" type="text/css" />
+</head>
+<body>
+  <div id="header">
+    <h1>云文档转换</h1>
+  </div>
+  <div id="input-file">
+    <h2>选择输入文件</h2>
+    <input type="file" value="open the file" name="open_file" id="open-file-btn"/>    
+  </div>
+  <div id="convert-file">
+    <h2>选择转化格式并转化</h2>
+    <input type="submit" value="转化" id="convert-file-btn" width="50px" height="20px"/>
+    <label><input type="radio" name="output-file-type" value=".md" checked="checked"/>markdown(.md)</label>
+    <label><input type="radio" name="output-file-type" value=".html" />HTML</label>
+    <label><input type="radio" name="output-file-type" value=".docx" />Word docx format</label>
+    <label><input type="radio" name="output-file-type" value=".org" />Org format</label>
+    <label><input type="radio" name="output-file-type" value=".json" />Json format</label>
+    <label><input type="radio" name="output-file-type" value=".rst" />Rst format</label>
+    <label><input type="radio" name="output-file-type" value=".tex" />LaTex format</label>
+    
+  </div>
+  <div id="output-file">    
+    <h2>转化结果</h2>
+    <div id="output-file-result">
+    </div>
+  </div>
+  <!-- <script type="javascript" src="{% static "js/functions.js" %}" ></script> -->
+  <script type="text/javascript" src="/static/js/functions.js" ></script>
+  
+</body>

@@ -1,0 +1,34 @@
+#header, #input-file, #convert-file, #output-file {
+    width: 1200px;
+    margin: 0 auto;
+}
+#header h1 {
+    background: #F0FFFF;
+    height: 100px;
+    /* float: left; */
+    margin-top: 20px;
+    text-align: center;
+    color: #996600;
+}
+#input-file {    
+    background: #0088FF;
+    height: 100px;
+}
+#convert-file {
+    background: #888888;
+    height: 200px;
+}
+#convert-file-btn {
+    width: 80px;
+    height: 30px;
+}
+    
+#output-file {    
+    background: #555555;
+    height: 200px;
+}
+
+
+#output-file a {
+    color: #FFFFFF;
+}
